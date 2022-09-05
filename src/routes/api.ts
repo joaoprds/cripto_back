@@ -16,15 +16,18 @@ router.get('/criptos/:id', CriptoController.one)
 
 // Create routes to POST method //
 router.post('/users', UserController.create)
+router.post('/login', UserController.login)
 router.post('/nfts', NftController.create)
 router.post('/criptos', CriptoController.create)
 
 // Create routes to PUT method //
 router.put('/users/:id', UserController.editUser)
 router.put('/nfts/:id', NftController.editNft)
-router.put('/criptos/:id', CriptoController.editCriptos)
+router.put('/criptos/:id', CriptoController.editCripto)
 
 // Create routes to DELETE method //
 router.delete('/users/:id', UserController.deleteUser)
-router.delete('/nfts/:id', CriptoController.deleteNft)
+router.delete('/nfts/:id', NftController.deleteNft)
 router.delete('/criptos/:id', CriptoController.deleteCripto)
+
+export {router}
